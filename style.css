@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Instrument Sans", sans-serif;
+    color: #d8849e;
+}
+
+.container {
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #fdbce4;
+}
+
+nav {
+    list-style-type: none;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+li {
+    display: inline-flex;
+    margin: 10px;
+    font-size: 18px;
+}
+
+img {
+    max-width: 100px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 150px;
+}
+
+.item {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    margin: 50% 0 50% 0;
+    color: #d8849e;
+    background-color: #fdbce4;
+    font-size: 20px;
+    border: 0px solid #ffffff;
+    border-radius: 20px;
+    padding: 15px 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+
+}
+
+button:hover {
+    color: #d8849e;
+    background-color: #ffffff;
+    transition: 1s;
+    padding: 20px 60px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#one {
+    margin: 50px 0;
+}
+
+.item:hover {
+    background-color: #d8849e;
+    transition: 1s;
+}
+
+a {
+    text-decoration: none;
+    color: #d8849e;
+}
+
+.item {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    /* Confinamento degli elementi al contenitore */
+    transition: box-shadow 0.3s ease;
+    /* Transizione per l'ombra */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease;
+    /* Transizione per lo sfocamento */
+}
+
+.item:hover img {
+    filter: blur(4px);
+    /* Sfoca l'immagine */
+}
+
+.item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Ombra più evidente al passaggio del mouse */
+}
+
+.item:hover img {
+    filter: blur(4px);
+    /* Sfoca l'immagine quando si passa sopra l'item */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(253, 188, 228, 0.9);
+    /* Leggera trasparenza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* Graduale comparsa */
+}
+
+.item:hover .overlay {
+    opacity: 1;
+    /* Rende visibile il pulsante */
+}
+
+.overlay button {
+    background-color: #d8849e;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+.overlay button:hover {
+    background-color: #ffffff;
+    color: #d8849e;
+    border: 1px solid #d8849e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.overlay button::after {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
